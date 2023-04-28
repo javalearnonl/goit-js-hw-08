@@ -11,8 +11,9 @@ body {
   color: #212121;
   line-height: 1.5;
 }
-ul {
+li {
   list-style: none;
+  list-style-type: none;
 }
 img {
   display: block;
