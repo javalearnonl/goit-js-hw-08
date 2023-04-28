@@ -1,5 +1,5 @@
-// Add imports above this line
-import SimpleLightbox from "simplelightbox";
+
+import SimpleLightbox from "simplelightbox.js";
 import "simplelightbox/dist/simple-lightbox.css"
 import { galleryItems } from './gallery-items';
 // Change code below this line
