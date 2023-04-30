@@ -21,8 +21,17 @@ refs.inputform.addEventListener('input', throttle(onEmailInput, 500));
 
 function onFormSubmit(evt) {
   evt.preventDefault();
+    if (!formData.email) {
+    alert("Поле електронної пошти обов'язкове для заповнення!");
+    return;
+  }
   evt.target.reset();
   localStorage.removeItem(STORAGE_KEY);
+  formData = {
+    email: "",
+    message: ""
+  };
+  console.log(formData); 
 }
 
 function onTextAreaInput(evt) {
@@ -46,10 +55,4 @@ function returnSavedFormState() {
     refs.textarea.value = formData.message;
     refs.inputform.value = formData.email;
   }
-}
-function onFormSubmit(evt) {
-  evt.preventDefault();
-  evt.target.reset();
-  localStorage.removeItem(STORAGE_KEY);
-  console.log(formData); 
 }
